@@ -28,20 +28,23 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        {/* AdSense のスクリプトを afterInteractive（ページ読み込み後）に */}
-        <Script
-          id="adsense-init"
-          strategy="afterInteractive"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          data-ad-client="ca-pub-8623190863216628"
-          crossOrigin="anonymous"
-        />
+        {/*
+          1) まず、このbeforeInteractiveスクリプトだけで
+             → js?client=… のクエリパラメータ付き
+             → HTMLヘッドに“静的”に入ります
+        */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Script
+          id="adsense-init"
+          strategy="beforeInteractive"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-8623190863216628"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
