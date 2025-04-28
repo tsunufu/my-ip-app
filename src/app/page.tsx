@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+export const runtime = "edge";
+
 export default function Home() {
   const [ipAddress, setIpAddress] = useState('');
 
