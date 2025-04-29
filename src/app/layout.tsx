@@ -45,6 +45,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-8623190863216628"
           crossOrigin="anonymous"
         />
+        <Script src="https://adm.shinobi.jp/s/de0e7c214988b14417c37aafb1bf51fa"/>
       </body>
     </html>
   );
