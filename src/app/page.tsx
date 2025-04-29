@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { AdmaxSwitch } from './components/AdmaxSwitch';
 
 export const runtime = "edge";
 
@@ -24,7 +25,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50">
-      <div className="bg-white rounded-lg shadow-xl p-12 w-3/4 max-w-2xl">
+      <div className="bg-white rounded-lg shadow-xl p-12 w-3/4 max-w-2xl text-center">
         <h1 className="text-4xl font-semibold text-gray-800 text-center mb-6">
           あなたのIPアドレスを確認
         </h1>
@@ -36,6 +37,7 @@ export default function Home() {
         <p className="text-gray-500 text-sm mt-4 text-center">
           このツールを使用すると、あなたのIPアドレスを簡単に確認できます。IPアドレスは、インターネット上であなたを識別するために使用される一意の番号です。
         </p>
+        <AdmaxSwitch id="9995517abf6f3cb7fcf9e98a7c04a67a" />
       </div>
     </main>
   );
